@@ -19,6 +19,9 @@ import qualified Data.Either as DE
 appName :: String
 appName  = "OPCONFIG"
 
+appVers :: String
+appVers = "v1.0b1"
+
 appDate :: String
 appDate = "[Compiled " ++ __DATE__ ++ " " ++ __TIME__ ++ "]"
 
@@ -73,7 +76,9 @@ formatTologcfg xs = channel ++ uds ++ params ++ triggers
 main :: IO()
 main = do 
 
-    putStrLn $ "\n" ++ appName ++ " " ++ appDate ++ "\n" ++ appDesc ++ "\n" ++ appCopy ++ "\n"
+    putStrLn $ appName ++ " " ++ appVers ++ " " ++ appDate ++ "\n" ++ 
+               appDesc ++ "\n" ++ 
+               appCopy ++ "\n"
     
     args <- SE.getArgs
     
