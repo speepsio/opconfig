@@ -20,7 +20,7 @@ appName :: String
 appName  = "OPCONFIG"
 
 appVers :: String
-appVers = "v1.0b1"
+appVers = "v0.9.0"
 
 appDate :: String
 appDate = "[Compiled " ++ __DATE__ ++ " " ++ __TIME__ ++ "]"
