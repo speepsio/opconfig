@@ -20,7 +20,7 @@ appName :: String
 appName  = "OPCONFIG"
 
 appVers :: String
-appVers = "v0.9.0"
+appVers = "0.9.0"
 
 appDate :: String
 appDate = "[Compiled " ++ __DATE__ ++ " " ++ __TIME__ ++ "]"
@@ -29,7 +29,7 @@ appDesc :: String
 appDesc  = "Openport Standalone Configurator"
 
 appCopy :: String
-appCopy  = "Copyright © 2016 by Sean Person"
+appCopy  = "Copyright (C) 2016 by Sean Person"
 
 appUsage :: String
 appUsage = "Usage: opconfig <filepath>"
