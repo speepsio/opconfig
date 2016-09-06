@@ -1,9 +1,9 @@
-# opconfig
-OPCONFIG is a command line utility that builds valid Tactrix Openport 2.0 stand alone log configurations. It can parse a specially formated CSV, then generate a valid logcfg.txt for placement the OP2 SD card.
+# OPCONFIG 0.9.0 Beta
+OPCONFIG is a command line utility that builds valid Tactrix Openport 2.0 stand alone log configurations. It can parse a specially formated CSVs, then generate a valid logcfg.txt for placement on the OP2 SD card.
 
-How to use:
+**How to use:**
 * Load master PIDs CSV in an editor/spreadsheet of your choice (e.g, Google Sheets).
-* Place an 'x' in the select column of PIDs you'd to log.
+* Place an 'x' in the select column of PIDs to export for logging.
 * Export the entire sheet including your new selections to CSV.
 * Run opconfig, include the filepath to the source csv, from the command line (terminal)
 * A correctly formated logcfg.txt file will be created in the same directory as the source csv.
