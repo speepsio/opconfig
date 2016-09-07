@@ -91,7 +91,7 @@ main = do
             csvText <- DTIO.readFile fp
             DE.either (\err -> putStrLn err) 
                       (\csv -> do 
-                                writeFile (fd ++ "logcfg.txt") . formatTologcfg . (map . map) DT.unpack $ csv
+                                writeFile ("logcfg.txt") . formatTologcfg . (map . map) DT.unpack $ csv
                                 putStrLn $ "Output: " ++ fd </> "logcfg.txt")
                       $ parseCSV csvText
 
