@@ -6,7 +6,6 @@
 
 
 module Main where
-import System.FilePath
 import qualified System.Environment as SE
 import qualified Data.Maybe as DM 
 import Text.ParseCSV as TP
@@ -33,6 +32,11 @@ appCopy  = "Copyright (C) 2016 by Sean Person"
 
 appUsage :: String
 appUsage = "Usage: opconfig <filepath>"
+
+
+
+outputFilename :: String 
+outputFilename = "logcfg.txt"
 
 
 
@@ -76,9 +80,7 @@ formatTologcfg xs = channel ++ uds ++ params ++ triggers
 main :: IO()
 main = do 
 
-    putStrLn $ appName ++ " " ++ appVers ++ " " ++ appDate ++ "\n" ++ 
-               appDesc ++ "\n" ++ 
-               appCopy ++ "\n"
+    putStrLn $ appName ++ " " ++ appVers ++ " " ++ appDate ++ "\n" ++ appDesc ++ "\n" ++ appCopy ++ "\n"
     
     args <- SE.getArgs
     
@@ -86,12 +88,10 @@ main = do
         then do
             putStrLn appUsage
         else do
-            let fp  = head args
-            let fd  = (takeDirectory fp)
-            csvText <- DTIO.readFile fp
+            csvText <- DTIO.readFile $ head args
             DE.either (\err -> putStrLn err) 
                       (\csv -> do 
-                                writeFile ("logcfg.txt") . formatTologcfg . (map . map) DT.unpack $ csv
-                                putStrLn $ "Output: " ++ fd </> "logcfg.txt")
+                                writeFile (outputFilename) . formatTologcfg . (map . map) DT.unpack $ csv
+                                putStrLn $ "Output: " ++ outputFilename)
                       $ parseCSV csvText
 
