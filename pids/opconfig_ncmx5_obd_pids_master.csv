@@ -179,7 +179,7 @@
 ,PSP_SW,Power Stearing Position Switch,0x22,0x1101,,1,7,,,off / on,,,
 ,RPM,Engine RPM,0x01,0x0C,,16,,"x,0.25,*",((A*256)+B)*0.25,rpm,,,
 ,RUNTIME,Runtime since engine start,0x01,0x1F,,16,,,,secs,,,
-,SCCS_V,Cruise Control Voltage,0x22,0xA216,,16,,"x,0.000076293945,*",((A*256)+B)*0.000076293945,V,,,
+x,SCCS_V,Cruise Control Voltage (+OP2 Tigger),0x22,0xA216,,16,,"x,0.000076293945,*",((A*256)+B)*0.000076293945,V,,,0
 ,SECSTAT,,0x22,0xC115,,8,,,,,,,
 ,SECTIME,,0x22,0xC117,,8,,,,,,,
 ,SPARKADV,Ignition Timing Advance,0x01,0x0E,,8,,"x,0.5,*,64,-",(A*0.5)-64,(angle),,,
