@@ -5,7 +5,7 @@ OPCONFIG is a command line utility that builds valid Tactrix Openport 2.0 stand 
 * Load master CSV in an editor/spreadsheet of your choice (e.g, Google Sheets).
 * Place an 'x' in the select column of PIDs to be logged.
 * Export the entire sheet, including now marked selections, to a new sub-master CSV.
-* Run opconfig from terminal (or command line) with "opconfig <filepath>", where filepath is the directory path, filename, and extension, of the sub-master CSV.
+* Run opconfig from terminal (or command line) with 'opconfig <filepath>', where filepath is the directory path, filename, and extension, of the sub-master CSV.
 * Logcfg.txt will be created in the same directory as sub-master.
 * Copy logcfg.txt to OP2 SD card, then proceed with logging.
 
