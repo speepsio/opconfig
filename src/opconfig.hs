@@ -73,7 +73,7 @@ formatTologcfg xs = channel ++ uds ++ params ++ triggers
                    . (map . map) tupleToMaybe                    -- map tuples to maybes
                    . map (zip (map ((\ a b -> b ++ a) " = ") . head $ xs)) -- map header properties to values as tuple (prop,value)  
                    $ (map . map) stringToMaybe . tail $ xs )
-        triggers = "\n\n;-----[ triggers ]-----\n\nconditionrpn = SCCS_V,4.0,>,SCCS_V,4.25,<,&&\naction = start\n\nconditionrpn = SCCS_V,3.0,>,SCCS_V,3.25,<,&&\naction = stop\n\n\n"
+        triggers = "\n\n;-----[ triggers ]-----\n\n;conditionrpn = SCCS_V,4.0,>,SCCS_V,4.25,<,&&\n;action = start\n\n;conditionrpn = SCCS_V,3.0,>,SCCS_V,3.25,<,&&\n;action = stop\n\n\n"
 
 
 
